@@ -1,6 +1,6 @@
 # Sahed Ahmed Palash, Biological Oceanography, GEOMAR
 # Deep Learning Basics,
-# Loading in my own images for test data and labels
+# Loading images for test data and labels
 
 # import the necessary packages
 import cv2                                                                            # to deal with image operations
@@ -13,7 +13,7 @@ import pickle                                                                   
 
 # specify the data directory and category folders
 datadir = "/media/sahed/Windows 10/ML/images/test_images"                            # path of the image folder
-categories = ["fiha", "sahed"]                                                        # name of the folder
+categories = ["calanoids", "eucalanoids", "euphausiids", "oithona", "pleuroncodes"]  # name of the folder
 
 # iterate over the images
 for category in categories:                                                           # interating over the folders
@@ -32,7 +32,7 @@ for category in categories:                                                     
 # lets fix the pixel numbers as uniformed for better future training because different picture have different shape
 img_size = 50                                                                         # define the number of shape 50/50
 new_array = cv2.resize(img_array, (img_size, img_size))                               # resize the old array to 50/50
-#plt.imshow(new_array, cmap="gray")                                                    # visualize the image
+#plt.imshow(new_array, cmap="gray")                                                   # visualize the image
 #plt.show()                                                                           # see the image
 #print(new_array)                                                                     # see the new array
 #print(new_array.shape)                                                               # see the new shape
@@ -49,7 +49,7 @@ def create_test_data():                                                         
             test_data.append([new_array, class_num])                                  # append the empyty list with new array and class number
 create_test_data()                                                                    # calling the function
 #print(len(test_data))                                                                # see the length of the training data
-#random.shuffle(test_data)                                                             # give training data a shuffle
+#random.shuffle(test_data)                                                            # give training data a shuffle
 #lets see the training data how does it looks like
 #for sample in training_data[:10]:                                                    # iterate over the first ten training data
     #print(sample[0], [1])                                                            # print the first one
