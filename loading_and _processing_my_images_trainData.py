@@ -13,7 +13,7 @@ import pickle                                                                   
 
 # specify the data directory and category folders
 datadir = "/media/sahed/Windows 10/ML/images/train_images"                            # path of the image folder
-categories = ["fiha", "sahed"]                                                        # name of the folder
+categories = ["calanoids", "eucalanoids", "euphausiids", "oithona", "pleuroncodes"]   # name of the folder
 
 # iterate over the images
 for category in categories:                                                           # interating over the folders
