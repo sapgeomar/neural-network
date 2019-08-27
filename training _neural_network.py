@@ -56,9 +56,9 @@ b = pickle.load(pickle_in)
 def labels():
     for i in b:
         if i == 0:
-            print("fiha")
+            print("calanoids")
         else:
-            print("sahed")
+            print("eucalanoids")
 
 #labels()
 
